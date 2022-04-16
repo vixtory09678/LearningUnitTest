@@ -16,6 +16,13 @@ void test_negative_digit() {
 	);
 }
 
+void test_should_return_empty_string() {
+	TEST_ASSERT_EQUAL_STRING(
+		"",
+		Utils::getNumberStrWithPaddingZero(4, 10000).c_str()
+	);
+}
+
 void setup() {
   Serial.begin(115200);
   delay(2000);
@@ -23,6 +30,7 @@ void setup() {
   UNITY_BEGIN();
   RUN_TEST(test_get_number_padding);
   RUN_TEST(test_negative_digit);
+  RUN_TEST(test_should_return_empty_string);
   UNITY_END();
 }
 
