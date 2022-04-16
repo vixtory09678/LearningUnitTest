@@ -23,6 +23,13 @@ void test_should_return_empty_string() {
 	);
 }
 
+void test_should_be_00300() {
+	TEST_ASSERT_EQUAL_STRING(
+		"00300",
+		Utils::getNumberStrWithPaddingZero(5, 300).c_str()
+	);
+}
+
 void setup() {
   Serial.begin(115200);
   delay(2000);
